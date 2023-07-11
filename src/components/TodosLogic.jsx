@@ -31,9 +31,14 @@ const TodosLogic = () => {
         ]);
     };
 
+    const addTodoItem = (title) => {
+        // update state with user's input
+        console.log('should add item ===>>>',title)
+    }
+
     return (
         <div>
-            <InputTodo />
+            <InputTodo addTodoItem={addTodoItem}/>
             <TodosList todosProps={todos} setTodos={setTodos} delTodo={delTodo} />
         </div>
     )
