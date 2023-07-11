@@ -1,7 +1,8 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 // 4. This will take the user's input
-const InputTodo = ({ itemProp, addTodoItem }) => {
+const InputTodo = ({ addTodoItem }) => {
     const [title, setTitle] = useState('');
     const [message, setMessage] = useState('');
     const handleSubmit = (event) => {
@@ -35,6 +36,10 @@ const InputTodo = ({ itemProp, addTodoItem }) => {
         </>
 
     )
+}
+
+InputTodo.propTypes = {
+    addTodoItem: PropTypes.func.isRequired,
 }
 
 export default InputTodo;

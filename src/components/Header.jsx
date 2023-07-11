@@ -3,7 +3,7 @@
 const Header = () => {
     return (
         <>
-            <h1>To-do's</h1>
+            <h1>To-do List</h1>
             <p>Add all the task you want to complete</p>
         </>
     )

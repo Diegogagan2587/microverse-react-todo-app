@@ -1,4 +1,6 @@
 // 6. TodoItem will render individual todos item
+import PropTypes from 'prop-types';
+
 const TodoItem = ({ itemProp, setTodos, delTodo }) => {
     const handleChange = (id) => {
         console.log('cliked', id)//remove after debuggin
@@ -29,5 +31,11 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
         </li>
     );
 };
+
+TodoItem.propTypes = {
+    itemProp: PropTypes.object.isRequired, 
+    setTodos: PropTypes.func.isRequired, 
+    delTodo: PropTypes.func.isRequired,
+}
 
 export default TodoItem;
