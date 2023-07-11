@@ -20,6 +20,7 @@ const InputTodo = (itemProp) => {
                 type="text"
                 placeholder="Add Todo..."
                 onChange={handleChange}
+                value={title}
             />
             <button>Submit</button>
         </form>
