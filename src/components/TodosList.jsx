@@ -1,3 +1,4 @@
+// 5. TodoList Serves as a container for the todos items.
 import TodoItem from "./TodoItem";
 
 const TodosList = ({todosProps, setTodos}) => {
