@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const TodosList = ({ todosProps, setTodos, delTodo }) => {
     return (
-        <ul>
+        <ul className="todos-container">
             {todosProps.map((todo) => (
                 <TodoItem key={todo.id} itemProp={todo} setTodos={setTodos} delTodo={delTodo} />
             ))}
