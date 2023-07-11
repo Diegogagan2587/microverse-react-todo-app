@@ -1,14 +1,18 @@
 import { useState } from "react";
 
 // 4. This will take the user's input
-const InputTodo = ({itemProp, addTodoItem}) => {
+const InputTodo = ({ itemProp, addTodoItem }) => {
     const [title, setTitle] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(title);
-        addTodoItem(title);
-        setTitle('');
+        if (title.trim()) {
+            addTodoItem(title);
+            setTitle('');
+        } else {
+            alert('Please add an item')
+        }
     }
 
     const handleChange = (event) => {
