@@ -21,6 +21,7 @@ const TodoItem = ({ itemProp, setTodos }) => {
                 checked={itemProp.completed}
                 onChangeCapture={() => handleChange(itemProp.id)}
             />
+            <button type="button">Delete</button>
             {itemProp.title}
         </li>
     );
