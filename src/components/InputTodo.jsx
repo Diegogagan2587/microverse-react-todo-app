@@ -32,7 +32,7 @@ const InputTodo = ({ addTodoItem }) => {
                 />
                 <button>Submit</button>
             </form>
-            <span>{message}</span>
+            <span className="warning">{message}</span>
         </>
 
     )
