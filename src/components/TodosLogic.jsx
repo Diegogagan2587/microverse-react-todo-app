@@ -34,6 +34,12 @@ const TodosLogic = () => {
     const addTodoItem = (title) => {
         // update state with user's input
         console.log('should add item ===>>>',title)
+        const newTodo = {
+            id: 4,
+            title: title,
+            completed: false,
+        }
+        setTodos([...todos,newTodo]);
     }
 
     return (
