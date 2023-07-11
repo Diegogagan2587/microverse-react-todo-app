@@ -4,12 +4,18 @@ import { useState } from "react";
 const InputTodo = (itemProp) => {
     const [title, setTitle] = useState('');
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(title)
+        setTitle('');
+    }
+
     const handleChange = (event) => {
         setTitle(event.target.value);
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Add Todo..."
