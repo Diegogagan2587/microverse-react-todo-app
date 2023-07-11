@@ -1,4 +1,7 @@
+// 3. TodosLogic Contains teh application logic. It includes tow direct child components.
 import { useState } from "react";
+import InputTodo from "./InputTodo";
+import TodosList from "./TodosList";
 
 const TodosLogic = () => {
     const [todos, setTodos] = useState([
