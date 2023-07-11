@@ -1,5 +1,5 @@
 // 6. TodoItem will render individual todos item
-const TodoItem = ({ itemProp, setTodos }) => {
+const TodoItem = ({ itemProp, setTodos, delTodo }) => {
     const handleChange = (id) => {
         console.log('cliked', id)//remove after debuggin
         setTodos((prevState) => 
@@ -21,7 +21,10 @@ const TodoItem = ({ itemProp, setTodos }) => {
                 checked={itemProp.completed}
                 onChangeCapture={() => handleChange(itemProp.id)}
             />
-            <button type="button">Delete</button>
+            <button 
+            type="button"
+            onClick={() => delTodo(itemProp.id)}
+            >Delete</button>
             {itemProp.title}
         </li>
     );
