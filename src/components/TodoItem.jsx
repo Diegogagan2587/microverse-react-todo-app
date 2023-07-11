@@ -1,4 +1,4 @@
-const TodoItem = ({ itemProp setTodos }) => {
+const TodoItem = ({ itemProp, setTodos }) => {
     return (
         <li>
             <input type="checkbox" />
